@@ -1,0 +1,40 @@
+# rpc服务运行地址
+service:
+  rpc-server-addr: "192.168.1.103:9998"
+
+# 金色财经新闻采集配置
+news-http-server:
+  baidu-fanyi-appid: "20210326000742591"
+  baidu-fanyi-key: "am0gz5UQeHTz7SxKkZob"
+  news-url: "https://api.jinse.com/noah/v2/lives"  # 金色财经实时新闻获取的api
+  refresh-time: 300 # 从gate获取行情的时间间隔，单位秒
+
+# 波场defi行情采集配置
+defi-http-server:
+  list-url: "https://abc.endjgfsv.link/swap/v2/exchanges/scan"
+  trans-url: "https://abc.endjgfsv.link/swap/scan/transactions"
+  kline-url: "https://apilist.tronscan.io/api/justswap/kline"
+  state-url: "https://abc.endjgfsv.link/swap/scan/statusinfo"
+  price-url: "https://abc.endjgfsv.link/swap/scan/priceinfo"
+  contract-url: "https://apilist.tronscanapi.com/api/contract"
+  refresh-time: 15 # 从sunswap获取行情的时间间隔，单位秒
+
+# 波场市场行情采集配置
+market-http-server:
+  market-url: "https://data.gateapi.io/api2/1/marketlist"
+  rate-url: "https://data.gateapi.io/api2/1/ticker/usdt_cny"
+  refresh-time: 15 # 从gate获取行情的时间间隔，单位秒
+
+# binance 需要监听的交易对
+need-sync-pairs:
+  - "bnbbtc"
+  - "ethbtc"
+  - "btcusdt"
+
+# websocket
+websocket:
+  - "wss://stream.binance.com:443/stream"
+  - "wss://stream.binance.com:9443/stream"
+
+# database
+db-data-source: "root:zxcvbnm1997@tcp(127.0.0.1:3306)/test?charset=utf8mb4"
